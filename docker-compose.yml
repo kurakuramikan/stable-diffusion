@@ -1,0 +1,10 @@
+version: "3"
+services:
+  stable-diffusion:
+    build: .
+    container_name: stable-diffusion-webui
+    ports:
+      - "7860:7860"
+    volumes:
+      - ./models:/stable-diffusion-webui/models/Stable-diffusion
+    restart: unless-stopped
