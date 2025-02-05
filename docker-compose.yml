@@ -8,3 +8,11 @@ services:
     volumes:
       - ./models:/stable-diffusion-webui/models/Stable-diffusion
     restart: unless-stopped
+    command:
+      [
+        "python",
+        "launch.py",
+        "--listen",
+        "--port=7860",
+        "--skip-torch-cuda-test",
+      ]
